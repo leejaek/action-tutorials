@@ -1,0 +1,22 @@
+name: Hello World
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+#       - uses: actions/checkout@v2
+
+      - name: Run pwd # step의 이름
+        run: pwd # step에서 수행되는 코드
+
+      - name: Run ls -al
+        run: ls -al
